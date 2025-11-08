@@ -1,0 +1,10 @@
+[
+  {"id":"basic-tee","name":"Basic Tee","category":"Apparel","price":19.99,"rating":4.4,"image":"","description":"Soft cotton tee for everyday wear."},
+  {"id":"running-shoes","name":"Running Shoes","category":"Footwear","price":89.99,"rating":4.6,"image":"","description":"Lightweight, breathable shoes built for speed."},
+  {"id":"wireless-earbuds","name":"Wireless Earbuds","category":"Electronics","price":59.99,"rating":4.3,"image":"","description":"Clear sound, long battery life, compact case."},
+  {"id":"smartwatch-lite","name":"Smartwatch Lite","category":"Electronics","price":129.99,"rating":4.2,"image":"","description":"Track health metrics and notifications all day."},
+  {"id":"hoodie","name":"Classic Hoodie","category":"Apparel","price":39.99,"rating":4.5,"image":"","description":"Warm fleece hoodie with kangaroo pocket."},
+  {"id":"backpack-pro","name":"Backpack Pro","category":"Accessories","price":69.99,"rating":4.7,"image":"","description":"Laptop sleeve, water-resistant, ergonomic straps."},
+  {"id":"water-bottle","name":"Insulated Water Bottle","category":"Home","price":24.99,"rating":4.8,"image":"","description":"Keeps drinks cold for 24h, hot for 12h."},
+  {"id":"yoga-mat","name":"Yoga Mat","category":"Fitness","price":29.99,"rating":4.4,"image":"","description":"Non-slip grip, cushioned comfort."}
+]

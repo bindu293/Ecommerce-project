@@ -1,0 +1,19 @@
+{
+  "name": "ai-ecommerce",
+  "version": "1.0.0",
+  "description": "AI-Enhanced E-commerce Platform with React and Node.js",
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "backend": "cd backend && npm start",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "keywords": ["ecommerce", "ai", "react", "nodejs", "firebase"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
