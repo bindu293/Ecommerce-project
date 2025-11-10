@@ -3,7 +3,6 @@ pipeline {
 
     environment {
         COMPOSE_FILE = 'docker-compose.yml'
-        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials'
     }
 
     stages {
@@ -34,18 +33,6 @@ pipeline {
             }
         }
 
-        stage('Push to Docker Hub') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    bat 'docker login -u %DOCKER_USER% -p %DOCKER_PASS%'
-                    bat 'docker tag ai-ecommercewebsite-frontend bindu892/ecommerce-frontend:latest'
-                    bat 'docker tag ai-ecommercewebsite-backend bindu892/ai-ecommerce-backend:latest'
-                    bat 'docker push bindu892/ecommerce-frontend:latest'
-                    bat 'docker push bindu892/ai-ecommerce-backend:latest'
-                }
-            }
-        }
-
         stage('Deploy') {
             steps {
                 bat "docker-compose -f %COMPOSE_FILE% up -d"
@@ -55,8 +42,8 @@ pipeline {
 
     post {
         always {
-            // bat "docker-compose -f %COMPOSE_FILE% down"  <-- Commented out so website stays running
-            echo "Build finished. Containers are still running. Open localhost to see the website."
+            echo "✅ Deployment complete. Your website is running."
+            echo "🌐 View it in browser at: http://localhost:5173"
         }
     }
 }
